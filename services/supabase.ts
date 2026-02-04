@@ -11,7 +11,7 @@ import { createClient } from '@supabase/supabase-js';
 // =================================================================================
 
 const supabaseUrl: string = 'https://tgwargfvnvqgaklwijbx.supabase.co'; // REPLACE WITH YOUR SUPABASE URL
-const supabaseAnonKey: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnd2FyZ2Z2bnZxZ2FrbHdpamJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk5ODkyOTcsImV4cCI6MjA4NTU2NTI5N30.RISwndCXpxaO-kBC_z6d3fu7W7L8OZb8W4MbtSC-7Y'; // REPLACE WITH YOUR SUPABASE ANON KEY
+const supabaseAnonKey: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnd2FyZ2Z2bnZxZ2FrbHdpamJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk5ODkyOTcsImV4cCI6MjA4NTU2NTI5N30.RISwndCXpxaO-kBC_z6qd3fu7W7L8OZb8W4MbtSC-7Y'; // REPLACE WITH YOUR SUPABASE ANON KEY
 
 // =================================================================================
 // STEP 2: SET UP YOUR DATABASE TABLE
