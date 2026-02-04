@@ -1,8 +1,19 @@
-
 import React from 'react';
-import { Search, Bell, Moon, Settings } from 'lucide-react';
+import { Search, Bell, Moon, Settings, LogOut } from 'lucide-react';
+import { supabase } from '../services/supabase';
+import toast from 'react-hot-toast';
 
 const Header: React.FC = () => {
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast.error('Logout failed: ' + error.message);
+    } else {
+      // The onAuthStateChange listener in useAuth will handle the redirect
+    }
+  };
+
   return (
     <header className="flex items-center justify-between h-16 px-6 bg-gray-800 border-b border-gray-700">
       <div className="flex items-center">
@@ -29,6 +40,9 @@ const Header: React.FC = () => {
           </button>
            <button className="p-2 text-gray-400 rounded-full hover:bg-gray-700 hover:text-white focus:outline-none focus:bg-gray-700 ml-2">
             <Settings className="w-5 h-5" />
+          </button>
+           <button onClick={handleLogout} title="Logout" className="p-2 text-gray-400 rounded-full hover:bg-gray-700 hover:text-white focus:outline-none focus:bg-gray-700 ml-2">
+            <LogOut className="w-5 h-5" />
           </button>
           <div className="ml-4">
             <img className="object-cover w-8 h-8 rounded-full" src="https://picsum.photos/100/100" alt="User" />
