@@ -1,4 +1,3 @@
-
 export interface Villa {
   id: number;
   created_at: string;
@@ -12,6 +11,7 @@ export interface Villa {
   owner_phone: string;
   is_available: boolean;
   marketing_caption: string;
+  user_id?: string;
 }
 
 export type NewVilla = Omit<Villa, 'id' | 'created_at'>;
